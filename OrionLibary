@@ -721,22 +721,13 @@ function OrionLib:MakeWindow(WindowConfig)
 			Parent           = TabHolder
 		})
 
-		-- Left accent line
-		Create("Frame", {
-			Size             = UDim2.new(0, 2, 0, 14),
-			Position         = UDim2.new(0, 8, 0.5, -7),
-			BackgroundColor3 = CategoryColor,
-			BorderSizePixel  = 0,
-			Parent           = CategoryRow
-		}, {Create("UICorner", {CornerRadius = UDim.new(0, 2)})})
-
-		-- Category text
+		-- Category text (kein Strich davor, größere Schrift)
 		Create("TextLabel", {
-			Size               = UDim2.new(1, -22, 1, 0),
-			Position           = UDim2.new(0, 18, 0, 0),
+			Size               = UDim2.new(1, -16, 1, 0),
+			Position           = UDim2.new(0, 8, 0, 0),
 			Text               = CategoryName,
 			TextColor3         = CategoryColor,
-			TextSize           = 11,
+			TextSize           = 13,
 			Font               = Enum.Font.GothamBold,
 			BackgroundTransparency = 1,
 			TextXAlignment     = Enum.TextXAlignment.Left,
